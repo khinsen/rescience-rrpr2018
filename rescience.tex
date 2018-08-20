@@ -36,26 +36,33 @@ Synchrotron SOLEIL, Division Exp\'{e}riences, Gif sur Yvette, France}
 %
 \begin{abstract}
   Independent replication is one of the most powerful methods to
-  detect mistakes and inaccuracies in published scientific studies.
-  In computational science, it requires the reimplementation of the
-  methods described in the original article by a different team of
-  researchers.  Replication is often performed by scientists who wish
-  to gain a better understanding of a published method, but its
-  results are rarely made public. ReScience~C is a peer-reviewed
-  journal dedicated to the publication of high-quality computational
-  replications that provide added value to the scientific community.
-  To this end, ReScience~C requires replications to be reproducible
-  and implemented using Open Source languages and libraries. In this
-  article, we provide an overview of ReScience~C's goals and quality
-  standard, outline the submission and reviewing processes, and
-  summarize the experience of its first three years of operation,
-  concluding with an outlook towards evolutions planned for the near
-  future.
+  verify published scientific studies.  In computational science, it
+  requires the reimplementation of the methods described in the
+  original article by a different team of researchers.  Replication is
+  often performed by scientists who wish to gain a better
+  understanding of a published method, but its results are rarely made
+  public. ReScience~C is a peer-reviewed journal dedicated to the
+  publication of high-quality computational replications that provide
+  added value to the scientific community.  To this end, ReScience~C
+  requires replications to be reproducible and implemented using Open
+  Source languages and libraries. In this article, we provide an
+  overview of ReScience~C's goals and quality standards, outline the
+  submission and reviewing processes, and summarize the experience of
+  its first three years of operation, concluding with an outlook
+  towards evolutions envisaged for the near future.
 
   \keywords{Open science \and Computational science \and Reproducibility}
 \end{abstract}
 %
 \section{Introduction}
+
+The question of how to attain reliable outcomes from unreliable components pervades many aspects of life. Scientific research is no exception. Individual research contributions are prone to mistakes, and sometimes fraud, and therefore error detection and correction mechanisms are required to reach a higher level of reliability at the collective level. The two main methods for error detection are critical inspection, starting with peer review but continuing well after the publication of an individual contribution, and independent replication of published work. But replication is more than a verification technique. For the researchers performing the replication, it yields a level of understanding and insight that is impossible to achieve by other means. This is in fact the main motivation for much replication work, verification being merely a side effect.
+
+The power but also the limitations of replication as an approach to verification are best illustrated by the recent discussion of replication crises in various scientific domains
+\cite{IoannidisWhyMostPublished2005,Baker500scientistslift2016,Munafomanifestoreproduciblescience2017,IqbalReproducibleResearchPractices2016}, which are all based on the observation of frequent failures to replicate published scientific findings. However, a replication failure does not necessarily mean that the original study is flawed as it could well be the replication work that is at fault. More interestingly, both the original and the replication work can be of excellent quality and yet yield different conclusions if some important factor has escaped everyone's attention. In this situation, independent replication can become the first step of completely new lines of research.
+
+Replication is thus an important contribution to science, and its findings should therefore be shared with the scientific community. Unfortunately, most journals do not accept replication studies for publication because originality is one of their selection criteria. For this reason, we launched ReScience  (now called ReScience~C for reasons explained later) in 2015 as a journal dedicated to replications in computational science. In this article, we outline its mode of operation and summarize our experience from the first few years. A more complete account has been published recently \cite{RougierSustainablecomputationalscience2017}
+
 
 %
 % ---- Bibliography ----
