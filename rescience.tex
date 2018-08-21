@@ -63,6 +63,13 @@ The power but also the limitations of replication as an approach to verification
 
 Replication is thus an important contribution to science, and its findings should therefore be shared with the scientific community. Unfortunately, most journals do not accept replication studies for publication because originality is one of their selection criteria. For this reason, we launched ReScience  (now called ReScience~C for reasons explained later) in 2015 as a journal dedicated to replications in computational science. In this article, we outline its mode of operation and summarize our experience from the first few years. A more complete account has been published recently \cite{RougierSustainablecomputationalscience2017}
 
+\section{Terminology}
+
+The replication crisis has given rise to an active debate in various domains of science, in which some terms, in particular ``reproducible'' and ``replicable'', are used in different and sometimes opposite meanings. Therefore we start with the definitions that we are using in this article and more generally in ReScience~C. Our definitions are formulated in the specific context of computational science, and are not easily transferable to experimental science \cite{HinsenScientificsoftwaredifferent2018}.
+
+A computation is \textit{reproducible} if the code and input data is available with sufficient instructions for someone else to re-do or \textit{reproduce} the computation. The only point in reproducing the computation is to verify its reproducibility, which in turn is evidence that the archived code and data is (1) complete and (2) indeed the code and data that was used in the original published study. A failed reproduction means that the description of the original code and data is incomplete or inaccurate. A very frequent variety of incompleteness is the lack of a detailed description of the computational environment, i.e. the infrastructure software (operating system, compiler, ...) or code dependencies (libraries, ...) that was used in the original work.
+
+A \textit{replication} of computational work involves writing and then running new software using only the description of a method published in a journal article, without using or consulting the software used by the original authors, which may or may not be available. Successful replication confirms that the method description is complete and accurate, and significantly reduces the probability of an error in either implementation. A failed replication can be caused by such errors or by an inexact or incomplete method description. It requires further investigation which, as explained above, can even lead to new directions of scientific inquiry.
 
 %
 % ---- Bibliography ----
