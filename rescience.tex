@@ -10,24 +10,24 @@
 %
 \title{ReScience~C: a Journal for Reproducible Replications in Computational Science}
 %
-%\titlerunning{Abbreviated paper title}
+\titlerunning{The ReScience~C Journal}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 
-\author{Nicolas P. Rougier\inst{1,2,3}\orcidID{0000-0002-6972-589X} \and
+\author{Nicolas P. Rougier\inst{1,2,3}\orcidID{0000-0002-6972-589X} \\ \and
 Konrad Hinsen\inst{4,5}\orcidID{0000-0003-0330-9428}}
 %
 \authorrunning{N.P. Rougier and K. Hinsen}
 %
-\institute{INRIA Bordeaux Sud-Ouest Talence, France
+\institute{INRIA Bordeaux Sud-Ouest, Talence, France\\
 \email{Nicolas.Rougier@inria.fr}
 \and
 Institut des Maladies Neurod\'{e}g\'{e}n\'{e}ratives,
-Universit\'{e} de Bordeaux, CNRS UMR 5293, Bordeaux, France
+Universit\'{e} de Bordeaux, CNRS~UMR~5293, Bordeaux, France
 \and
-LaBRI, Universit\'{e} de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France
+LaBRI, Universit\'{e} de Bordeaux, Bordeaux INP, CNRS~UMR~5800, Talence, France
 \and
-Centre de Biophysique Mol\'{e}culaire, CNRS UPR4301, Orléans, France 
+Centre de Biophysique Mol\'{e}culaire, CNRS~UPR~4301, Orl\'{e}ans, France 
 \email{Konrad.Hinsen@cnrs.fr}
 \and
 Synchrotron SOLEIL, Division Exp\'{e}riences, Gif sur Yvette, France}
@@ -56,7 +56,7 @@ Synchrotron SOLEIL, Division Exp\'{e}riences, Gif sur Yvette, France}
 %
 \section{Introduction}
 
-The question of how to attain reliable outcomes from unreliable components pervades many aspects of life. Scientific research is no exception. Individual research contributions are prone to mistakes, and sometimes fraud, and therefore error detection and correction mechanisms are required to reach a higher level of reliability at the collective level. The two main methods for error detection are critical inspection, starting with peer review or article submissions but continuing well after publication, and independent replication of published work. But replication is more than a verification technique. For the researchers performing the replication, it yields a level of understanding and insight that is impossible to achieve by other means. This is in fact the main motivation for much replication work, verification being merely a side effect.
+The question of how to attain reliable outcomes from unreliable components pervades many aspects of life. Scientific research is no exception. Individual research contributions are prone to mistakes, and sometimes fraud, and therefore error detection and correction mechanisms are required to reach a higher level of reliability at the collective level. The two main methods for error detection are critical inspection, starting with peer review of article submissions but continuing well after publication, and independent replication of published work. But replication is more than a verification technique. For the researchers performing the replication, it yields a level of understanding and insight that is impossible to achieve by other means. This is in fact the main motivation for much replication work, verification being merely a side effect.
 
 The power but also the limitations of replication as an approach to verification are best illustrated by the recent discussion of replication crises in various scientific domains~\cite{IoannidisWhyMostPublished2005,Baker500scientistslift2016,Munafomanifestoreproduciblescience2017,IqbalReproducibleResearchPractices2016}, which are all based on the observation of frequent failures to replicate published scientific findings. However, a replication failure does not necessarily mean that the original study is flawed. First of all, it could well be the replication work that is at fault. But it is also possible that both the original and the replication work are of excellent quality and yet yield different conclusions, if some important factor has escaped everyone's attention and accidentally differs between the two studies (see~\cite{Smartwarsupercooledwater2018,PalmerCommentputativeliquidliquid2018} for a recent example that led to a seven-year search for the cause of the disagreement). In this situation, independent replication can become the starting point of completely new lines of research.
 
@@ -96,9 +96,9 @@ Another outstanding feature of ReScience~C is its reliance on no other infrastru
 
 After three years of operation, our original ideas for ReScience~C have turned into concrete practical experience which has mostly confirmed our expectations. It has also shown a few weaknesses, most of which concern technical details, which we are currently addressing in an overhaul of the ReScience~C publishing workflow. In the following we summarize this experience and the conclusions we have drawn from it, referring to the full account~\cite{RougierSustainablecomputationalscience2017} for the details.
 
-ReScience~C has so far published 27 articles. Most submissions are from computational neuroscience, the other represented domains are neuroimaging, computational ecology, and computer graphics. No submission was ever rejected. All submitted replications were successful, but this is probably due to a selection bias: publishing a failed replication is equivalent to publicly accusing the authors of the target work of having made a mistake, which is a potential source of conflict. One idea we have put forward to alleviate this obstacle is pre-publication replication. In that scenario, researchers submit their original work to a new type of journal, for which we use the name CoScience to indicate that we imagine at as the successor of ReScience. The journal then invites other scientists to do a replication, and publishes the original work and the replication together as a single joint work by the original authors and the replication team.
+ReScience~C has so far published 27 articles. Most submissions are from computational neuroscience, the other represented domains are neuroimaging, computational ecology, and computer graphics. No submission was ever rejected. All submitted replications were successful, but this is probably due to a selection bias: publishing a failed replication is equivalent to publicly accusing the authors of the target work of having made a mistake, which is a potential source of conflict. One idea we have put forward to alleviate this obstacle is pre-publication replication. In that scenario, researchers submit their original work to a new type of journal, for which we use the name CoScience to indicate that we imagine it as the successor of ReScience. The journal then invites other scientists to do a replication, and publishes the original work and the replication together as a single joint work by the original authors and the replication team.
 
-Achieving reproducibility has been much more challenging than expected. It is the reviewers' task to verify reproducibility, but our experience has shown that this is not sufficient to ensure that someone else can reproduce the work as well. Reviewers typically work in the same field as the authors and are likely to have similar software installation on their computers, meaning that unlisted dependencies can easily go unnoticed. There are a few approaches that would improve reproducibility, but each has its downsides as well. IPOL~\cite{limareIPOLReviewedPublication2012} provides online execution via its Web site, which is extremely convenient for both reviewers and readers. However, it is feasible only because IPOL's narrow domain scope (signal processing) makes the restriction to a small number of computational environments (C/C++, Python, Matlab) acceptable. We could also impose higher technical reproducibility guarantees on authors, e.g. the submission of an archived environment in the form of a virtual machine or a container image, which would also open the door to online execution via services such as Binder~\cite{thebinderteamBinder2017}. Such a requirement might, however, also become an additional barrier discouraging researchers from publishing their replication work.
+Achieving reproducibility has been much more challenging than expected. It is the reviewers' task to verify reproducibility, but our experience has shown that this is not sufficient to ensure that someone else can reproduce the work as well. Reviewers typically work in the same field as the authors and are likely to have similar software installation on their computers, meaning that unlisted dependencies can easily go unnoticed. There are a few approaches that would improve reproducibility, but each has its downsides as well. IPOL~\cite{limareIPOLReviewedPublication2012} provides online execution via its Web site, which is extremely convenient for both reviewers and readers. However, it is feasible only because IPOL's narrow domain scope (signal processing) makes the restriction to a small number of computational environments (C/C++, Python, Matlab) acceptable. We could also impose higher technical reproducibility guarantees on authors, e.g. the submission of an archived environment in the form of a virtual machine or a container image, which would also open the door to online execution via services such as Binder~\cite{binder}. Such a requirement might, however, also become an additional barrier discouraging researchers from publishing their replication work.
 
 The open reviewing process has overall worked very well. The exchanges between reviewers and authors have been constructive and courteous without exception. The handling editor intervenes mainly at the beginning, by inviting reviewers, and at the end, by judging if the reviewers' feedback is satisfactory for publication. Occasionally, reviewers or authors ask the handling editor for help with specific, mostly technical, issues. Another common task for the handling editor is to gently nudge authors or reviewers towards completing their tasks within reasonable delays. It is rare for third parties to intervene, but in one case a reviewer suggested asking the author of the target study for the permission to re-use some data, which he did by commenting directly on the GitHub platform.
 
